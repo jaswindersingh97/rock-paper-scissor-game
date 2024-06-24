@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div id="gamepage">
+    <div id="scorecard">
+        <div id="rps">
+            <h1>ROCK</h1>
+            <h1>PAPER</h1>
+            <h1>SCISSOR</h1>
+        </div>
+        <div id="score">
+            <div class="scorediv">
+                <p>COMPUTER SCORE</p>
+                <p id="comp" class="num">0</p>
+            </div>
+            <div class="scorediv">
+                <p>YOUR SCORE</p>
+                <p id="user" class="num">0</p>
+            </div>
+        </div>
+    </div>
+    <div id="interface1" class="main">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+        <div id="row1">
+        <div class="button" id="rock" onclick="optionSelect(event)"><img src="images/rock.png" alt="rock"></div>
+        <div class="button" id="scissors" onclick="optionSelect(event)"><img src="images/scissors.png" alt="scissors"></div>
+    </div>
+        <div id="row2">
+            <div class="button" id="paper" onclick="optionSelect(event)"><img src="images/paper.png" alt="paper"></div>
+        </div>
+    </div>
+    <div id="interface2" class="hidden" >
+        <div class="anon">
+        <label for="player" >YOU PICKED</label>
+        <div id="play" class="circle">
+            <div class="button" id="player">
+                <img src="" id="playerimg" alt="playerselected">
+            </div>
+        </div>
+        </div>
+        <div id="result">
+            <h1 id="matchresult">result</h1>
+            <h2 id="tie">AGAINST PC</h2>
+            <button class="retry" onclick="retry()">PLAY AGAIN</button>
+        </div>
+        <div class="anon">
+            <label for="computer">PC PICKED</label>
+        <div id="PC" class="circle">
+        <div class="button" id="computer">
+            <img src="" id="computerimg" alt="computerselected">
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="hidden" id="Rules">
+        <span id="close" onclick="rules()">X</span>
+        <div id="rcontent">
+            <h1>Game Rules</h1>
+            <ul>
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”
+                </li>
+                <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                <li>If both players lay down the same hand, each player lays down another hand</li>
+            </ul>
+        </div>
+    </div>
+    <div id="wonpage" class="hidden">
+        <div id="victoryimages">
+        <img class="victoryimages" id="trophy" src="images/trophy.png" alt="trophy">
+        <img class="victoryimages" id="stars" src="images/stars.png" alt="stars"></div>
+        <h1>HURRAY!!</h1>
+        <h2>YOU WON THE GAME</h2>
+        <button class="retry" onclick="retry()">PLAY AGAIN</button>
+    </div>
+    <div id="footer">
+        <div class="fbutton" onclick="rules()">RULES</div>
+        <div class="fbutton" id="Next" onclick="winpage()">NEXT</div>
+    </div>
+
+</body>
+</html>
